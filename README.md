@@ -171,7 +171,7 @@ Our final findings showed that both a Uni-Variate Linear Regression model compar
 
 However, when we tried to remove sales in NA as a predictor, in order to create a Multi-Variate Linear Regression model to see if there was a strong relationship between genre and platform of the game, when compared to the global sales of the game. The extremely low R^2 value of this model indicates that there is a very weak relationship between these factors.
 
-Overall, these results could possibly indicate that a Multi-Variate Linear Regression model is not always necessarily better than a Uni-Variate Linear Regression model. This is because the additional independent variables we use as predictors may have a very weak relationship with the variable being predicter. In the example of our Linear Regression models, we found that Genre and Platform had a weak relationship with Global Sales, and as such did not necessarily help make our original Multi-Variate Linear Regression model better.
+Overall, these results could possibly indicate that a Multi-Variate Linear Regression model is not always necessarily better than a Uni-Variate Linear Regression model. This is because the additional independent variables we use as predictors may have a very weak relationship with the variable being predicter. In the example of our Linear Regression models, we found that Genre and Platform had a weak relationship with Global Sales, and as such did not necessarily help make our original Uni-Variate Linear Regression model better.
 
 Future work could involve further refining the model by incorporating additional predictors from other datasets or exploring different machine learning algorithms to improve predictive performance.
 
