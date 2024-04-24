@@ -41,7 +41,7 @@ In this section of the project, we prepared and cleaned the dataset to help us a
 We performed the following:
 1. We use the isnull() function to check if there are any data entries that are missing any information, and the sum function to see how many Null values are in each column.
 2. We use the dropna() function to remove Null data entries to "clean" the data to ensure that all the data can be compared to each other. 
-3. Since 'Year' should not be a 'Float" data type, we can change the dtype of 'Year' to be in the datetime format using the to_datetime() function.
+3. Since 'Year' should not be a 'Float" data type, we can change the Dtype of 'Year' to be in the datetime format using the to_datetime() function.
 
 
 
