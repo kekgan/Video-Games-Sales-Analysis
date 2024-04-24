@@ -28,7 +28,7 @@ This README briefly highlights what we have accomplished in this project. If you
 For this Mini-project, we will use data and variables in the form of the Genre, Publisher and Platform of a video game, to predict the correlation and pattern in Global Sales for the game.
 
 #### 1.2) Our Dataset: 
-The dataset we have chosen to use for this Mini-Project is "[Video Game Sales](https://www.kaggle.com/datasets/gregorut/videogamesales)" by Gregory Smith, username [gregorut](https://www.kaggle.com/gregorut), on Kaggle. This dataset conatins a list of all video game sales with greater than 100,000 copies sold between the years 1980 and 2020. The fields, or columns that are included in this dataset are RANK of overall sales, NAME of the game, PLATFORM of the game's release, YEAR of the game's release, GENRE of the game, PUBLISHER of the game, sales in North America, Europe, Japan, other parts of the world (in millions), and total worldwide sales (millions).
+The dataset we have chosen to use for this Mini-Project is "[Video Game Sales](https://www.kaggle.com/datasets/gregorut/videogamesales)" by Gregory Smith, username [gregorut](https://www.kaggle.com/gregorut), on Kaggle. This dataset contains a list of all video game sales with greater than 100,000 copies sold between the years 1980 and 2020. The fields, or columns that are included in this dataset are RANK of overall sales, NAME of the game, PLATFORM of the game's release, YEAR of the game's release, GENRE of the game, PUBLISHER of the game, sales in North America, Europe, Japan, other parts of the world (in millions), and total worldwide sales (millions).
 
 #### 1.3) Rationale:
 Entertainment has always been a large part of humanity and cultures all over the world. Even before industrialisation, indigenous people in villages were had folk songs to sing and intricate stories to tell. Over the past century, entertainment has evolved leaps and bounds, from theatre acts and plays to films and even more recently, short form videos on platforms like TikTok. However, one aspect of entertainment that has not changed is the presence of fun and enjoyment. Over the last half century, this fun and enjoyment has evolved to people of all ages playing video games, first as retro 8-bit games in arcades, then as games on our modern computers and console platforms in each household, such as the older Nintendo 64 or more modern consoles like the Sony PS5. As SCSE students, many of us have vast interests in video games and these games were large parts of our childhood, or played frequently in our current daily lives, or even both. As such, we have decided to look into the sales of video games over the years.
@@ -54,11 +54,11 @@ We first check the columns of our DataFrame and then use the describe function t
 From our heatmap, we can see that Global Sales has a high correlation with both NA and EU sales, much higher than JP and Other regions. This perhaps suggests that those two regions make up a majority of the sample count, or that their preferences are generally the most aligned with the Global audience. We will continue to zoom into the specifics of how each variable affects the Global Sales in the follow sections.
 
 #### 3.2) Explored Sales By Region:
-First we categorised games published by year and found that there were large increases after the years 1990 and  2000. We credited these results to the increasing presence of computers in homes and the release of the PlayStation 2 and XBOX respectively. 
+First we categorised games published by year and found that there were large increases after the years 1990 and 2000. We credited these results to the increasing presence of computers in homes and the release of the PlayStation 2 and XBOX respectively. 
 
 Next, we grouped and compared video game sales over the years. Our findings show that NA produced more video game sales than EU, JP and other region sales in every single year (even though it was close in 1980). We can also see that the 3 years with the most sales are 1986, 2000 and 2003. Zooming in on those years in the dataset, these years saw the release of the original Legend of Zelda in 1986, Pokemon Crystal and Final Fantasy IX in 2000, and Need for Speed Underground and Mario Kart: Double Dash!! in 2003. Our findings also showed the periods with low video games sales, such as between 1983-1985 and 2004-2010, which both denoted periods of global recession. 
 
-We then plotted a pie chart consolidating all the years and showed us the overall proportion of sales overall. From the pie chart, it is clear to see that NA sales make up a huge proportion of sales, accounting to almost half of all sales. This could be why NA Sales were shown to have an extremely high correlation with Global Sales earlier. EU has a population of 448 million people, Japan with 125 million and NA with 579 million. Even though NA's population is about 30% more than EU's population, the proportion of sales in NA are almost double that of EU. EU's population is more than triple that of Japan's, but Japan's sales still add up to more than half that of EU's.Overall, these numbers suggest that taking into account their respective population sizes, video games are the most popular in NA, followed by Japan, then EU and lastly the rest of the world.
+We then plotted a pie chart consolidating all the years and showed us the overall proportion of sales overall. From the pie chart, it is clear to see that NA sales make up a huge proportion of sales, accounting to almost half of all sales. This could be why NA Sales were shown to have an extremely high correlation with Global Sales earlier. EU has a population of 448 million people, Japan with 125 million and NA with 579 million. Even though NA's population is about 30% more than EU's population, the proportion of sales in NA are almost double that of EU. EU's population is more than triple that of Japan's, but Japan's sales still add up to more than half that of EU's. Overall, these numbers suggest that taking into account their respective population sizes, video games are the most popular in NA, followed by Japan, then EU and lastly the rest of the world.
 
 #### 3.3) Explored Sales By Genre:
 Here, we look at the number of games pubished by genres. We find that Action and Sports games overshadow the other genres. 
@@ -107,7 +107,7 @@ Similar to the train data, our model's R^2 score is high and MSE & MAE are relat
 Overall, our model's high R^2 score and low MAE and MSE scores indicates that our model performs well, even on the Test Set data.
 
 #### 4.2) Multi-Variate Linear Regression
-Now, we will perform Multi-Variate Linear Regression on our data. For the purpose of this Linear Regression, we will use 'NA_Sales', along with 'Genre' and 'Platform' to predict the total global sales for the game. Since both 'Genre' and 'Platform' are categorical data, we will use Label Encoding to convert those categorical variables into numerical variables that can be used in a linear regression model. With label encoding, we assign a numerical value to each possible value of the categorical variable. Now, we can once again create a 80:20 split in the data, and then use sklearn's LinearRegression model to perform Linear Regression on our data. Much like in our Uni-Variate Linear Regression, we use X_train as our predictor and y_train as our response, and then check the intercept and coefficients for this model, before lastly checking the goodness of fit on each model.
+Now, we will perform Multi-Variate Linear Regression on our data. For the purpose of this Linear Regression, we will use 'NA_Sales', along with 'Genre' and 'Platform' to predict the total global sales for the game. Since both 'Genre' and 'Platform' are categorical data, we will use **Label Encoding** to convert those categorical variables into numerical variables that can be used in a linear regression model. With label encoding, we assign a numerical value to each possible value of the categorical variable. Now, we can once again create a 80:20 split in the data, and then use sklearn's LinearRegression model to perform Linear Regression on our data. Much like in our Uni-Variate Linear Regression, we use X_train as our predictor and y_train as our response, and then check the intercept and coefficients for this model, before lastly checking the goodness of fit on each model.
 
 Goodness of Fit on Train Set:\
 R^2 score		: 0.8953784343102612\
@@ -128,19 +128,19 @@ By using more variables in our model, we expect the accuracy of our model's pred
 
 After being label encoded, the categorical data became numerical. Genre 'Sports' has a value 10, genre 'Racing' has a value 6, platform 'Wii' has a value of 26, platform 'NES' has a value of 11, etc. This will confuse the model because it may think that 'Sports' is somehow greater than 'Racing', while 'Wii' is somehow greater than 'NES', and so on. In other words, using label encoding presents a false numerical relationship, which should be avoided.
 
-Instead, we tried using one-hot encoding to create new columns for each 'Genre' and 'Platform' and give them binary values, with 1 indicating the game is on the platform or in the genre, while 0 indicates it is not. Now, we can re-train our Multi-Variate Linear Regression model with our new DataFrame.
+Instead, we tried using **one-hot encoding** to create new columns for each 'Genre' and 'Platform' and give them binary values, with True indicating the game is on the platform or in the genre, while False indicates it is not. Now, we can re-train our Multi-Variate Linear Regression model with our new DataFrame.
 
 After splitting our dataset in a 80:20 train-test split again, we plotted our regression lines to see how the model performs, both on the Train Set and the Test Set. After checking the Goodness of Fit of the Model on each dataset, we are left with the followiing findings.
 
-Goodness of Fit on Train Set:\
-R^2 score		: 0.03989516078189126\
-Mean Squared Error	: 2.4546862603917057\
-Mean Absolute Error	: 0.5622799812100164
+Goodness of Fit on Train Set:
+R^2 score		: 0.9015339475927185
+Mean Squared Error	: 0.25174674273697234
+Mean Absolute Error	: 0.19716586966852673
 
-Goodness of Fit on Test Set:\
-R^2 score		: 0.0661869029307719\
-Mean Squared Error	: 1.919414123168939\
-Mean Absolute Error	: 0.5664269067429719
+Goodness of Fit on Test Set:
+R^2 score		: 0.8423727711583765
+Mean Squared Error	: 0.32399623670320493
+Mean Absolute Error	: 0.19224731021548905
 
 We find that switching the method of encoding from Label Encoding to One-hot Encoding did not increase the accuracy of our model. Since we already established that NA sales and global sales had a high correlation and accuracy of model, all this showed was that there was a weak relationship between platform and genre, and global sales.
 
@@ -169,7 +169,7 @@ Other than content covered during the course, our project included new technique
 
 Our final findings showed that both a Uni-Variate Linear Regression model comparing sales in NA to global sales, as well as a Multi-Variate Linear Regression model that added Genre and Platform into these predictors had extremely high accuracy, with an R^2 score of over 83%, indicating that it explains more than 83% of the variance in video game sales. Additionally, the model exhibited a low mean squared error and mean absolute error, suggesting that, on average, the model's predictions were close to the actual sales figures. 
 
-However, when we tried to remove sales in NA as a predictor, in order to create a Multi-Variate Linear Regression model to see if there was a strong relationship between genre and platform of the game, when compared to the global sales of the game. The etremely low R^2 value of this model indicates that there is a very weak relationship between these factors.
+However, when we tried to remove sales in NA as a predictor, in order to create a Multi-Variate Linear Regression model to see if there was a strong relationship between genre and platform of the game, when compared to the global sales of the game. The extremely low R^2 value of this model indicates that there is a very weak relationship between these factors.
 
 Overall, these results could possibly indicate that a Multi-Variate Linear Regression model is not always necessarily better than a Uni-Variate Linear Regression model. This is because the additional independent variables we use as predictors may have a very weak relationship with the variable being predicter. In the example of our Linear Regression models, we found that Genre and Platform had a weak relationship with Global Sales, and as such did not necessarily help make our original Multi-Variate Linear Regression model better.
 
